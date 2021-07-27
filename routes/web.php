@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("/auth/callback","AuthController@callback");
+Route::get("/auth/google","AuthController@google");
+Route::get("/auth","AuthController@index");
